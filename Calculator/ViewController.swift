@@ -12,18 +12,23 @@ class ViewController: UIViewController {
     
     var userIsInTheMiddleOfTyppingANumber = false
     
+    
+    
     @IBOutlet weak var displayLabel: UILabel!
     
     
     @IBAction func pushedDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         
-        if userIsInTheMiddleOfTyppingANumber{
-            displayLabel.text = displayLabel.text! + digit
+        if (userIsInTheMiddleOfTyppingANumber && digit != ".") || (digit == "." && displayLabel.text?.rangeOfString(".") != nil) {
+            
+
+                displayLabel.text = displayLabel.text! + digit
         } else {
             displayLabel.text = digit
             userIsInTheMiddleOfTyppingANumber = true
         }
+        
     }
     
     var displayValue:Double{
