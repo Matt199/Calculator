@@ -36,17 +36,20 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func pushedOperator(sender: UIButton) {
-        if let mathematicalOperator = sender.currentTitle{
-            if mathematicalOperator == "∏" {
-                displayValue = M_PI
-            }
-            else if mathematicalOperator == "√"{
-                displayValue = sqrt(displayValue)
-            }
-        
-        }
+    var brain = CalculatorBrain()
     
+    @IBAction func pushedOperator(sender: UIButton) {
+        
+        if userIsInTheMiddleOfTyppingANumber{
+            brain.performOperand(displayValue)
+        }
+        if let mathematicalOperator = sender.currentTitle{
+         
+            brain.setSymbol(mathematicalOperator)
+            userIsInTheMiddleOfTyppingANumber = false
+        }
+        displayValue = brain.result
+        print(displayValue)
     }
     
 }

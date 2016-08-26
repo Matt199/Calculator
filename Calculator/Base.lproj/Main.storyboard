@@ -73,13 +73,12 @@
                                     <action selector="pushedOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1t5-sZ-SLM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-Ys-BLI">
-                                <rect key="frame" x="31" y="281" width="30" height="30"/>
-                                <state key="normal" title="sin"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3es-Ym-tsD">
                                 <rect key="frame" x="31" y="329" width="30" height="30"/>
                                 <state key="normal" title="cos"/>
+                                <connections>
+                                    <action selector="pushedOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6A-vo-cpb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ1-x3-Haw">
                                 <rect key="frame" x="130" y="281" width="30" height="30"/>
@@ -121,6 +120,13 @@
                                 <state key="normal" title="√"/>
                                 <connections>
                                     <action selector="pushedOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQ9-bp-ZHx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-Ys-BLI">
+                                <rect key="frame" x="31" y="281" width="30" height="30"/>
+                                <state key="normal" title="sin"/>
+                                <connections>
+                                    <action selector="pushedOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQ6-Dh-qq1"/>
                                 </connections>
                             </button>
                         </subviews>
